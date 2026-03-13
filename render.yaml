@@ -1,10 +1,8 @@
-services:
-  # Base de datos PostgreSQL Gratuita para n8n
-  - type: postgres
-    name: n8n-db
+databases:
+  - name: n8n-db
     plan: free
-    
-  # Instancia de n8n
+
+services:
   - type: web
     name: n8n-server
     env: docker
@@ -47,5 +45,4 @@ services:
         value: 10000
       - key: NODE_ENV
         value: production
-    # Render usa el puerto 10000 por defecto para servicios web de Docker
     port: 10000
