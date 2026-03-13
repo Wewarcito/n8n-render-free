@@ -1,6 +1,6 @@
 services:
   # Base de datos PostgreSQL Gratuita para n8n
-  - type: pgo
+  - type: postgres
     name: n8n-db
     plan: free
     
